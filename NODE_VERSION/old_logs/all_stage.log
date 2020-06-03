@@ -1,0 +1,396 @@
+info: Mon Apr 27 2:57:32 pm | Stage CV1 Gateway 2: Check Disk Usage: 47
+
+info: Mon Apr 27 2:57:32 pm | Stage App Server: Check ActiveMQ Logs:
+[27/Apr/2020:21:57:01 +0000] MemoryPercentUsage = 1, StorePercentUsage = 0, TempPercentUsage = 0, TotalEnqueueCount = 999942, TotalDequeueCount = 1003920, TotalMessageCount = 1808, TotalConsumerCount = 22, TotalProducerCount = 29, TotalConnectionsCount = 209085 , InactiveDurableTopicSubscribers =  0
+
+info: Mon Apr 27 2:57:32 pm | Stage App Servers: Check list of running Daemons:
+   15924     1  0 18:50 ?        00:00:00 /usr/bin/php ./device-event-handler bb-ds-broker.local 61613 bb-web-svcs-events /var/log/bbsvcs/event-email-actions.log /var/log/bbsvcs/event-power-actions.log
+bbsvcs   16151     1  0 18:55 ?        00:00:00 /usr/bin/php ./UpgradeOrchestratorD
+bbproc   16495     1  0 Jan08 ?        02:39:47 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   16813     1  0  2018 ?        09:05:52 java -DpersistedStore=/var/bb-device-subsys/etc/online-states.sqlite3 -jar ./ConnLossEventGenerator/ConnLossEventGenerator.jar
+bbproc   16834     1  0  2018 ?        09:23:27 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbsvcs   20060     1  0 Feb04 ?        01:44:07 java -jar /home/bbsvcs/NotiD/NotiD.jar
+bbproc   21388     1  0 Feb04 ?        01:15:36 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+bbproc   23539     1  0  2019 ?        18:54:19 /usr/lib/jvm/java-8-oracle/bin/java -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=/opt/apache-activemq-5.15.0//conf/login.config -Dcom.sun.management.jmxremote -Djava.awt.headless=true -Djava.io.tmpdir=/opt/apache-activemq-5.15.0//tmp -Dactivemq.classpath=/opt/apache-activemq-5.15.0//conf:/opt/apache-activemq-5.15.0//../lib/: -Dactivemq.home=/opt/apache-activemq-5.15.0/ -Dactivemq.base=/opt/apache-activemq-5.15.0/ -Dactivemq.conf=/opt/apache-activemq-5.15.0//conf -Dactivemq.data=/opt/apache-activemq-5.15.0//data -jar /opt/apache-activemq-5.15.0//bin/activemq.jar start xbean:activemq-BlueBOLT-DeviceSubsystem.xml
+devcomm+ 27683     1  0 Apr01 ?        00:00:00 ./bin/dev-comm-assistant /var/bb-device-subsys
+
+info: Mon Apr 27 2:57:32 pm | Stage CV1 Gateway 1: Check Disk Usage: 52
+
+info: Mon Apr 27 2:57:32 pm | Stage App Server: Check Disk Usage: 57
+
+info: Mon Apr 27 2:57:32 pm | Stage CV1 Gateway 1: List Running Daemons:
+cv1comm   2855     1  0 Apr13 ?        00:00:39 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  14492     1  0 11:37 ?        00:00:18 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+cv1comm  15823  2855  0 21:52 ?        00:00:01 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  23724     1  0 Apr21 ?        00:02:58 java -DcacheFileName=cv1-event-master.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=jms -DsourceMessageDestination=cv1-event-slave -DslaveEventMessageDestination=cv1-event-slave-sync -DeventMessageDestination=device events -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc   24127     1  0 Apr10 ?        00:09:00 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   24149     1  0 Apr10 ?        00:13:28 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   24170     1  0 Apr10 ?        00:12:35 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+cv1comm  27401     1  0 Apr10 ?        00:08:02 java -DcacheFileName=cv1-event-slave.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+
+info: Mon Apr 27 2:57:32 pm | Stage CV1 Gateway 1: Count Running Daemons: 8
+
+info: Mon Apr 27 2:57:32 pm | Stage Dev Subsystem: List Running Daemons:
+bbproc     773     1  0 Apr10 ?        00:14:12 java -DuseSingleton=true -jar ./Cloud-Side-Ping-Daemon/Cloud-Side-Ping-Daemon.jar
+cv1comm    926     1  0 Apr10 ?        00:14:02 java -DjmsHost=bb-ds-broker.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=bb-db-device-hist.local -DholdDelay=60 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+cv1comm   6209     1  0 Apr13 ?        00:53:24 java -Dspring.profiles.active=test -jar /home/cv1comm/cv1-message-processor/cv1-message-processor-1.0.0.jar
+cv1comm   6334     1  0 Apr13 ?        00:11:30 java -DdbSrcHost=bb-db-device.local -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+bbproc    6369     1  0 Apr13 ?        00:11:24 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    8875     1  0 Apr14 ?        00:10:25 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    9087     1  0 Apr14 ?        00:11:26 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+devcomm+ 30243     1  0 Apr24 ?        00:03:32 java -jar JobRelay.jar
+
+info: Mon Apr 27 2:57:32 pm | Stage Web Server: Count PHP Errors: 11
+
+info: Mon Apr 27 2:57:32 pm | Stage App Server: Count Daemons: 9
+
+info: Mon Apr 27 2:57:33 pm | Stage DC12 Subsystem: List Running Daemons:
+bbproc    2397     1  0 Apr10 ?        00:09:16 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   16454     1  0 Apr09 ?        00:13:28 java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar
+devcomm+ 18342     1  0 Apr07 ?        00:14:49 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+cv1comm  21500     1  0 Apr09 ?        00:13:54 java -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+
+info: Tue Apr 28 10:00:28 am | Stage App Server: Check ActiveMQ Logs:
+[28/Apr/2020:17:00:01 +0000] MemoryPercentUsage = 1, StorePercentUsage = 0, TempPercentUsage = 0, TotalEnqueueCount = 1006374, TotalDequeueCount = 1008566, TotalMessageCount = 1808, TotalConsumerCount = 22, TotalProducerCount = 29, TotalConnectionsCount = 210629 , InactiveDurableTopicSubscribers =  0
+
+info: Tue Apr 28 10:00:28 am | Stage Web Server: Count PHP Errors: 4
+
+info: Tue Apr 28 10:00:28 am | Stage CV1 Gateway 2: Check Disk Usage: 47
+
+info: Tue Apr 28 10:00:28 am | Stage Dev Subsystem: List Running Daemons:
+bbproc     773     1  0 Apr10 ?        00:14:49 java -DuseSingleton=true -jar ./Cloud-Side-Ping-Daemon/Cloud-Side-Ping-Daemon.jar
+cv1comm    926     1  0 Apr10 ?        00:14:39 java -DjmsHost=bb-ds-broker.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=bb-db-device-hist.local -DholdDelay=60 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+cv1comm   6209     1  0 Apr13 ?        00:56:17 java -Dspring.profiles.active=test -jar /home/cv1comm/cv1-message-processor/cv1-message-processor-1.0.0.jar
+cv1comm   6334     1  0 Apr13 ?        00:12:07 java -DdbSrcHost=bb-db-device.local -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+bbproc    6369     1  0 Apr13 ?        00:12:01 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    8875     1  0 Apr14 ?        00:11:03 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    9087     1  0 Apr14 ?        00:12:07 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+devcomm+ 30243     1  0 Apr24 ?        00:04:16 java -jar JobRelay.jar
+
+info: Tue Apr 28 10:00:28 am | Stage CV1 Gateway 1: Check Disk Usage: 52
+
+info: Tue Apr 28 10:00:28 am | Stage App Server: Check Disk Usage: 57
+
+info: Tue Apr 28 10:00:28 am | Stage App Server: Count Daemons: 9
+
+info: Tue Apr 28 10:00:28 am | Stage App Servers: Check list of running Daemons:
+bbsvcs   15924     1  0 Apr27 ?        00:00:03 /usr/bin/php ./device-event-handler bb-ds-broker.local 61613 bb-web-svcs-events /var/log/bbsvcs/event-email-actions.log /var/log/bbsvcs/event-power-actions.log
+bbsvcs   16151     1  0 Apr27 ?        00:00:02 /usr/bin/php ./UpgradeOrchestratorD
+bbproc   16495     1  0 Jan08 ?        02:40:43 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   16813     1  0  2018 ?        09:06:31 java -DpersistedStore=/var/bb-device-subsys/etc/online-states.sqlite3 -jar ./ConnLossEventGenerator/ConnLossEventGenerator.jar
+bbproc   16834     1  0  2018 ?        09:24:06 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbsvcs   20060     1  0 Feb04 ?        01:45:03 java -jar /home/bbsvcs/NotiD/NotiD.jar
+bbproc   21388     1  0 Feb04 ?        01:16:18 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+bbproc   23539     1  0  2019 ?        18:59:51 /usr/lib/jvm/java-8-oracle/bin/java -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=/opt/apache-activemq-5.15.0//conf/login.config -Dcom.sun.management.jmxremote -Djava.awt.headless=true -Djava.io.tmpdir=/opt/apache-activemq-5.15.0//tmp -Dactivemq.classpath=/opt/apache-activemq-5.15.0//conf:/opt/apache-activemq-5.15.0//../lib/: -Dactivemq.home=/opt/apache-activemq-5.15.0/ -Dactivemq.base=/opt/apache-activemq-5.15.0/ -Dactivemq.conf=/opt/apache-activemq-5.15.0//conf -Dactivemq.data=/opt/apache-activemq-5.15.0//data -jar /opt/apache-activemq-5.15.0//bin/activemq.jar start xbean:activemq-BlueBOLT-DeviceSubsystem.xml
+devcomm+ 27683     1  0 Apr01 ?        00:00:00 ./bin/dev-comm-assistant /var/bb-device-subsys
+
+info: Tue Apr 28 10:00:28 am | Stage CV1 Gateway 1: Count Running Daemons: 8
+
+info: Tue Apr 28 10:00:28 am | Stage CV1 Gateway 1: List Running Daemons:
+cv1comm   2855     1  0 Apr13 ?        00:00:41 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  14492     1  0 Apr27 ?        00:00:45 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+cv1comm  17956  2855  0 16:59 ?        00:00:00 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  23724     1  0 Apr21 ?        00:03:20 java -DcacheFileName=cv1-event-master.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=jms -DsourceMessageDestination=cv1-event-slave -DslaveEventMessageDestination=cv1-event-slave-sync -DeventMessageDestination=device events -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc   24127     1  0 Apr10 ?        00:09:24 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   24149     1  0 Apr10 ?        00:14:04 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   24170     1  0 Apr10 ?        00:13:09 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+cv1comm  27401     1  0 Apr10 ?        00:08:24 java -DcacheFileName=cv1-event-slave.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+
+info: Tue Apr 28 10:00:29 am | Stage DC12 Subsystem: List Running Daemons:
+bbproc    2397     1  0 Apr10 ?        00:09:41 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   16454     1  0 Apr09 ?        00:14:02 java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar
+devcomm+ 18342     1  0 Apr07 ?        00:15:23 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+cv1comm  21500     1  0 Apr09 ?        00:14:28 java -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+
+info: Tue Apr 28 10:23:18 am | Stage CV1 Gateway 2: Check Disk Usage: 47
+
+info: Tue Apr 28 10:23:18 am | Stage Dev Subsystem: List Running Daemons:
+bbproc     773     1  0 Apr10 ?        00:14:50 java -DuseSingleton=true -jar ./Cloud-Side-Ping-Daemon/Cloud-Side-Ping-Daemon.jar
+cv1comm    926     1  0 Apr10 ?        00:14:40 java -DjmsHost=bb-ds-broker.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=bb-db-device-hist.local -DholdDelay=60 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+cv1comm   6209     1  0 Apr13 ?        00:56:20 java -Dspring.profiles.active=test -jar /home/cv1comm/cv1-message-processor/cv1-message-processor-1.0.0.jar
+cv1comm   6334     1  0 Apr13 ?        00:12:08 java -DdbSrcHost=bb-db-device.local -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+bbproc    6369     1  0 Apr13 ?        00:12:02 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    8875     1  0 Apr14 ?        00:11:04 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    9087     1  0 Apr14 ?        00:12:08 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+devcomm+ 30243     1  0 Apr24 ?        00:04:17 java -jar JobRelay.jar
+
+info: Tue Apr 28 10:23:18 am | Stage Web Server: Count PHP Errors: 0
+
+info: Tue Apr 28 10:23:18 am | Stage App Server: Check ActiveMQ Logs:
+[28/Apr/2020:17:21:01 +0000] MemoryPercentUsage = 1, StorePercentUsage = 0, TempPercentUsage = 0, TotalEnqueueCount = 1006406, TotalDequeueCount = 1008604, TotalMessageCount = 1808, TotalConsumerCount = 22, TotalProducerCount = 29, TotalConnectionsCount = 210633 , InactiveDurableTopicSubscribers =  0
+
+info: Tue Apr 28 10:23:18 am | Stage App Server: Count Daemons: 9
+
+info: Tue Apr 28 10:23:18 am | Stage CV1 Gateway 1: List Running Daemons:
+cv1comm   2855     1  0 Apr13 ?        00:00:41 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  14492     1  0 Apr27 ?        00:00:46 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+cv1comm  18139  2855  0 17:23 ?        00:00:00 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  23724     1  0 Apr21 ?        00:03:21 java -DcacheFileName=cv1-event-master.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=jms -DsourceMessageDestination=cv1-event-slave -DslaveEventMessageDestination=cv1-event-slave-sync -DeventMessageDestination=device events -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc   24127     1  0 Apr10 ?        00:09:24 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   24149     1  0 Apr10 ?        00:14:05 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   24170     1  0 Apr10 ?        00:13:09 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+cv1comm  27401     1  0 Apr10 ?        00:08:25 java -DcacheFileName=cv1-event-slave.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+
+info: Tue Apr 28 10:23:18 am | Stage CV1 Gateway 1: Count Running Daemons: 8
+
+info: Tue Apr 28 10:23:18 am | Stage App Server: Check Disk Usage: 57
+
+info: Tue Apr 28 10:23:18 am | Stage App Servers: Check list of running Daemons:
+bbsvcs   15924     1  0 Apr27 ?        00:00:03 /usr/bin/php ./device-event-handler bb-ds-broker.local 61613 bb-web-svcs-events /var/log/bbsvcs/event-email-actions.log /var/log/bbsvcs/event-power-actions.log
+bbsvcs   16151     1  0 Apr27 ?        00:00:02 /usr/bin/php ./UpgradeOrchestratorD
+bbproc   16495     1  0 Jan08 ?        02:40:44 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   16813     1  0  2018 ?        09:06:32 java -DpersistedStore=/var/bb-device-subsys/etc/online-states.sqlite3 -jar ./ConnLossEventGenerator/ConnLossEventGenerator.jar
+bbproc   16834     1  0  2018 ?        09:24:07 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbsvcs   20060     1  0 Feb04 ?        01:45:04 java -jar /home/bbsvcs/NotiD/NotiD.jar
+bbproc   21388     1  0 Feb04 ?        01:16:18 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+bbproc   23539     1  0  2019 ?        18:59:58 /usr/lib/jvm/java-8-oracle/bin/java -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=/opt/apache-activemq-5.15.0//conf/login.config -Dcom.sun.management.jmxremote -Djava.awt.headless=true -Djava.io.tmpdir=/opt/apache-activemq-5.15.0//tmp -Dactivemq.classpath=/opt/apache-activemq-5.15.0//conf:/opt/apache-activemq-5.15.0//../lib/: -Dactivemq.home=/opt/apache-activemq-5.15.0/ -Dactivemq.base=/opt/apache-activemq-5.15.0/ -Dactivemq.conf=/opt/apache-activemq-5.15.0//conf -Dactivemq.data=/opt/apache-activemq-5.15.0//data -jar /opt/apache-activemq-5.15.0//bin/activemq.jar start xbean:activemq-BlueBOLT-DeviceSubsystem.xml
+devcomm+ 27683     1  0 Apr01 ?        00:00:00 ./bin/dev-comm-assistant /var/bb-device-subsys
+
+info: Tue Apr 28 10:23:18 am | Stage CV1 Gateway 1: Check Disk Usage: 52
+
+info: Tue Apr 28 10:23:19 am | Stage DC12 Subsystem: List Running Daemons:
+bbproc    2397     1  0 Apr10 ?        00:09:41 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   16454     1  0 Apr09 ?        00:14:03 java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar
+devcomm+ 18342     1  0 Apr07 ?        00:15:24 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+cv1comm  21500     1  0 Apr09 ?        00:14:29 java -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+
+info: Wed Apr 29 9:54:48 am | Stage CV1 Gateway 1: Check Disk Usage: 52
+
+info: Wed Apr 29 9:54:48 am | Stage App Server: Check Disk Usage: 57
+
+info: Wed Apr 29 9:54:48 am | Stage Dev Subsystem: List Running Daemons:
+bbproc     773     1  0 Apr10 ?        00:15:37 java -DuseSingleton=true -jar ./Cloud-Side-Ping-Daemon/Cloud-Side-Ping-Daemon.jar
+cv1comm    926     1  0 Apr10 ?        00:15:26 java -DjmsHost=bb-ds-broker.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=bb-db-device-hist.local -DholdDelay=60 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+cv1comm   6209     1  0 Apr13 ?        00:59:56 java -Dspring.profiles.active=test -jar /home/cv1comm/cv1-message-processor/cv1-message-processor-1.0.0.jar
+cv1comm   6334     1  0 Apr13 ?        00:12:53 java -DdbSrcHost=bb-db-device.local -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+bbproc    6369     1  0 Apr13 ?        00:12:48 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    8875     1  0 Apr14 ?        00:11:50 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    9087     1  0 Apr14 ?        00:12:59 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+devcomm+ 30243     1  0 Apr24 ?        00:05:12 java -jar JobRelay.jar
+
+info: Wed Apr 29 9:54:48 am | Stage App Server: Check ActiveMQ Logs:
+[29/Apr/2020:16:54:01 +0000] MemoryPercentUsage = 1, StorePercentUsage = 0, TempPercentUsage = 0, TotalEnqueueCount = 1014323, TotalDequeueCount = 1014255, TotalMessageCount = 1808, TotalConsumerCount = 22, TotalProducerCount = 29, TotalConnectionsCount = 212517 , InactiveDurableTopicSubscribers =  0
+
+info: Wed Apr 29 9:54:48 am | Stage CV1 Gateway 2: Check Disk Usage: 47
+
+info: Wed Apr 29 9:54:48 am | Stage CV1 Gateway 1: List Running Daemons:
+cv1comm   2855     1  0 Apr13 ?        00:00:44 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  14492     1  0 Apr27 ?        00:01:18 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+cv1comm  20557  2855  0 16:43 ?        00:00:04 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  23724     1  0 Apr21 ?        00:03:48 java -DcacheFileName=cv1-event-master.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=jms -DsourceMessageDestination=cv1-event-slave -DslaveEventMessageDestination=cv1-event-slave-sync -DeventMessageDestination=device events -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc   24127     1  0 Apr10 ?        00:09:54 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   24149     1  0 Apr10 ?        00:14:49 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   24170     1  0 Apr10 ?        00:13:51 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+cv1comm  27401     1  0 Apr10 ?        00:08:52 java -DcacheFileName=cv1-event-slave.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+
+info: Wed Apr 29 9:54:48 am | Stage Web Server: Count PHP Errors: 122
+
+info: Wed Apr 29 9:54:48 am | Stage App Servers: Check list of running Daemons:
+bbsvcs   15924     1  0 Apr27 ?        00:00:06 /usr/bin/php ./device-event-handler bb-ds-broker.local 61613 bb-web-svcs-events /var/log/bbsvcs/event-email-actions.log /var/log/bbsvcs/event-power-actions.log
+bbsvcs   16151     1  0 Apr27 ?        00:00:04 /usr/bin/php ./UpgradeOrchestratorD
+bbproc   16495     1  0 Jan08 ?        02:41:57 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   16813     1  0  2018 ?        09:07:21 java -DpersistedStore=/var/bb-device-subsys/etc/online-states.sqlite3 -jar ./ConnLossEventGenerator/ConnLossEventGenerator.jar
+bbproc   16834     1  0  2018 ?        09:24:56 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbsvcs   20060     1  0 Feb04 ?        01:46:17 java -jar /home/bbsvcs/NotiD/NotiD.jar
+bbproc   21388     1  0 Feb04 ?        01:17:12 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+bbproc   23539     1  0  2019 ?        19:07:03 /usr/lib/jvm/java-8-oracle/bin/java -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=/opt/apache-activemq-5.15.0//conf/login.config -Dcom.sun.management.jmxremote -Djava.awt.headless=true -Djava.io.tmpdir=/opt/apache-activemq-5.15.0//tmp -Dactivemq.classpath=/opt/apache-activemq-5.15.0//conf:/opt/apache-activemq-5.15.0//../lib/: -Dactivemq.home=/opt/apache-activemq-5.15.0/ -Dactivemq.base=/opt/apache-activemq-5.15.0/ -Dactivemq.conf=/opt/apache-activemq-5.15.0//conf -Dactivemq.data=/opt/apache-activemq-5.15.0//data -jar /opt/apache-activemq-5.15.0//bin/activemq.jar start xbean:activemq-BlueBOLT-DeviceSubsystem.xml
+devcomm+ 27683     1  0 Apr01 ?        00:00:00 ./bin/dev-comm-assistant /var/bb-device-subsys
+
+info: Wed Apr 29 9:54:48 am | Stage CV1 Gateway 1: Count Running Daemons: 8
+
+info: Wed Apr 29 9:54:48 am | Stage App Server: Count Daemons: 9
+
+info: Wed Apr 29 9:54:49 am | Stage DC12 Subsystem: List Running Daemons:
+bbproc    2397     1  0 Apr10 ?        00:10:11 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   16454     1  0 Apr09 ?        00:14:44 java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar
+devcomm+ 18342     1  0 Apr07 ?        00:16:05 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+cv1comm  21500     1  0 Apr09 ?        00:15:10 java -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+
+info: Wed Apr 29 3:07:56 pm | Stage Web Server: Count PHP Errors: 0
+
+info: Wed Apr 29 3:07:56 pm | Stage Dev Subsystem: List Running Daemons:
+bbproc     773     1  0 Apr10 ?        00:15:47 java -DuseSingleton=true -jar ./Cloud-Side-Ping-Daemon/Cloud-Side-Ping-Daemon.jar
+cv1comm    926     1  0 Apr10 ?        00:15:37 java -DjmsHost=bb-ds-broker.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=bb-db-device-hist.local -DholdDelay=60 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+cv1comm   6209     1  0 Apr13 ?        01:00:44 java -Dspring.profiles.active=test -jar /home/cv1comm/cv1-message-processor/cv1-message-processor-1.0.0.jar
+cv1comm   6334     1  0 Apr13 ?        00:13:04 java -DdbSrcHost=bb-db-device.local -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+bbproc    6369     1  0 Apr13 ?        00:12:58 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    8875     1  0 Apr14 ?        00:12:01 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc    9087     1  0 Apr14 ?        00:13:11 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+devcomm+ 30243     1  0 Apr24 ?        00:05:23 java -jar JobRelay.jar
+
+info: Wed Apr 29 3:07:56 pm | Stage CV1 Gateway 2: Check Disk Usage: 47
+
+info: Wed Apr 29 3:07:57 pm | Stage App Server: Check ActiveMQ Logs:
+[29/Apr/2020:22:06:01 +0000] MemoryPercentUsage = 1, StorePercentUsage = 0, TempPercentUsage = 0, TotalEnqueueCount = 1015218, TotalDequeueCount = 1015176, TotalMessageCount = 1808, TotalConsumerCount = 22, TotalProducerCount = 29, TotalConnectionsCount = 212625 , InactiveDurableTopicSubscribers =  0
+
+info: Wed Apr 29 3:07:57 pm | Stage CV1 Gateway 1: List Running Daemons:
+cv1comm   2855     1  0 Apr13 ?        00:00:45 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  14492     1  0 Apr27 ?        00:01:25 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+cv1comm  21109  2855  0 22:07 ?        00:00:00 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm  23724     1  0 Apr21 ?        00:03:54 java -DcacheFileName=cv1-event-master.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=jms -DsourceMessageDestination=cv1-event-slave -DslaveEventMessageDestination=cv1-event-slave-sync -DeventMessageDestination=device events -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc   24127     1  0 Apr10 ?        00:10:01 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   24149     1  0 Apr10 ?        00:14:59 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   24170     1  0 Apr10 ?        00:14:00 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+cv1comm  27401     1  0 Apr10 ?        00:08:58 java -DcacheFileName=cv1-event-slave.data-cache.ser -DbrokerHost=bb-ds-broker.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+
+info: Wed Apr 29 3:07:57 pm | Stage CV1 Gateway 1: Check Disk Usage: 52
+
+info: Wed Apr 29 3:07:57 pm | Stage App Server: Check Disk Usage: 57
+
+info: Wed Apr 29 3:07:57 pm | Stage App Server: Count Daemons: 9
+
+info: Wed Apr 29 3:07:57 pm | Stage App Servers: Check list of running Daemons:
+bbsvcs   15924     1  0 Apr27 ?        00:00:07 /usr/bin/php ./device-event-handler bb-ds-broker.local 61613 bb-web-svcs-events /var/log/bbsvcs/event-email-actions.log /var/log/bbsvcs/event-power-actions.log
+bbsvcs   16151     1  0 Apr27 ?        00:00:05 /usr/bin/php ./UpgradeOrchestratorD
+bbproc   16495     1  0 Jan08 ?        02:42:16 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbproc   16813     1  0  2018 ?        09:07:34 java -DpersistedStore=/var/bb-device-subsys/etc/online-states.sqlite3 -jar ./ConnLossEventGenerator/ConnLossEventGenerator.jar
+bbproc   16834     1  0  2018 ?        09:25:09 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbsvcs   20060     1  0 Feb04 ?        01:46:36 java -jar /home/bbsvcs/NotiD/NotiD.jar
+bbproc   21388     1  0 Feb04 ?        01:17:25 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+bbproc   23539     1  0  2019 ?        19:09:03 /usr/lib/jvm/java-8-oracle/bin/java -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=/opt/apache-activemq-5.15.0//conf/login.config -Dcom.sun.management.jmxremote -Djava.awt.headless=true -Djava.io.tmpdir=/opt/apache-activemq-5.15.0//tmp -Dactivemq.classpath=/opt/apache-activemq-5.15.0//conf:/opt/apache-activemq-5.15.0//../lib/: -Dactivemq.home=/opt/apache-activemq-5.15.0/ -Dactivemq.base=/opt/apache-activemq-5.15.0/ -Dactivemq.conf=/opt/apache-activemq-5.15.0//conf -Dactivemq.data=/opt/apache-activemq-5.15.0//data -jar /opt/apache-activemq-5.15.0//bin/activemq.jar start xbean:activemq-BlueBOLT-DeviceSubsystem.xml
+devcomm+ 27683     1  0 Apr01 ?        00:00:00 ./bin/dev-comm-assistant /var/bb-device-subsys
+
+info: Wed Apr 29 3:07:57 pm | Stage CV1 Gateway 1: Count Running Daemons: 8
+
+info: Wed Apr 29 3:07:57 pm | Stage DC12 Subsystem: List Running Daemons:
+bbproc    2397     1  0 Apr10 ?        00:10:18 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   16454     1  0 Apr09 ?        00:14:53 java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar
+devcomm+ 18342     1  0 Apr07 ?        00:16:14 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+cv1comm  21500     1  0 Apr09 ?        00:15:19 java -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+
+info: Tue Jun 2 5:14:40 pm | Stage CV1 Gateway 2: Check Disk Usage: 52
+
+info: Tue Jun 2 5:14:40 pm | Stage Dev Subsystem: List Running Daemons:
+devcomm+  2878     1  0 Jun01 ?        00:01:11 java -jar JobRelay.jar
+cv1comm   4166     1  0 Jun01 ?        00:01:16 java -DdbSrcHost=bb-db-device.local -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+cv1comm   5465     1  0 Jun01 ?        00:01:03 java -DjmsHost=bb-ds-broker.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=bb-db-device-hist.local -DholdDelay=60 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+cv1comm   6209     1  0 Apr13 ?        03:29:38 java -Dspring.profiles.active=test -jar /home/cv1comm/cv1-message-processor/cv1-message-processor-1.0.0.jar
+bbproc    8875     1  0 Apr14 ?        00:41:24 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc   15717     1  0 Jun02 ?        00:00:12 java -DuseSingleton=true -jar ./Cloud-Side-Ping-Daemon/Cloud-Side-Ping-Daemon.jar
+bbproc   16236     1  0 Jun02 ?        00:00:12 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+bbproc   21090     1  0 May29 ?        00:05:26 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+
+info: Tue Jun 2 5:14:40 pm | Stage Web Server: Count PHP Errors: 0
+
+info: Tue Jun 2 5:14:40 pm | Stage CV1 Gateway 1: Check Disk Usage: 57
+
+info: Tue Jun 2 5:14:40 pm | Stage CV1 Gateway 1: List Running Daemons:
+cv1comm   2855     1  0 Apr13 ?        00:02:19 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm   7866  2855  0 00:13 ?        00:00:00 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+bbproc   13615     1  0 May29 ?        00:02:33 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   25277     1  0 Jun01 ?        00:00:58 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+cv1comm  26558     1  0 Jun01 ?        00:00:36 java -DcacheFileName=cv1-event-master.data-cache.ser -DamqHost=bb-ds-broker.local -DamqPort=61616 -DdataSourceType=jms -DsourceMessageDestination=cv1-event-slave -DslaveEventMessageDestination=cv1-event-slave-sync -DeventMessageDestination=device events -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc   27839     1  0 Jun01 ?        00:00:54 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+
+info: Tue Jun 2 5:14:40 pm | Stage CV1 Gateway 1: Count Running Daemons: 6
+
+info: Tue Jun 2 5:14:40 pm | Stage App Servers: Check list of running Daemons:
+bbproc    2504     1  0 Jun01 ?        00:01:36 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbsvcs    2783     1  0 May29 ?        00:00:12 /usr/bin/php ./UpgradeOrchestratorD
+bbproc    3999     1  0 Jun01 ?        00:01:09 java -DpersistedStore=/var/bb-device-subsys/etc/online-states.sqlite3 -jar ./ConnLossEventGenerator/ConnLossEventGenerator.jar
+bbproc   21388     1  0 Feb04 ?        01:49:04 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+bbproc   23539     1  0  2019 ?        23:24:33 /usr/lib/jvm/java-8-oracle/bin/java -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=/opt/apache-activemq-5.15.0//conf/login.config -Dcom.sun.management.jmxremote -Djava.awt.headless=true -Djava.io.tmpdir=/opt/apache-activemq-5.15.0//tmp -Dactivemq.classpath=/opt/apache-activemq-5.15.0//conf:/opt/apache-activemq-5.15.0//../lib/: -Dactivemq.home=/opt/apache-activemq-5.15.0/ -Dactivemq.base=/opt/apache-activemq-5.15.0/ -Dactivemq.conf=/opt/apache-activemq-5.15.0//conf -Dactivemq.data=/opt/apache-activemq-5.15.0//data -jar /opt/apache-activemq-5.15.0//bin/activemq.jar start xbean:activemq-BlueBOLT-DeviceSubsystem.xml
+bbsvcs   25780     1  0 May27 ?        00:08:39 java -jar /home/bbsvcs/NotiD/NotiD.jar
+devcomm+ 27683     1  0 Apr01 ?        00:00:00 ./bin/dev-comm-assistant /var/bb-device-subsys
+bbproc   29333     1  0 May29 ?        00:04:25 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbsvcs   32710     1  0 Jun01 ?        00:00:06 /usr/bin/php ./device-event-handler bb-ds-broker.local 61613 bb-web-svcs-events /var/log/bbsvcs/event-email-actions.log /var/log/bbsvcs/event-power-actions.log
+
+info: Tue Jun 2 5:14:40 pm | Stage App Server: Check ActiveMQ Logs:
+[03/Jun/2020:00:12:01 +0000] MemoryPercentUsage = 1, StorePercentUsage = 1, TempPercentUsage = 0, TotalEnqueueCount = 1251936, TotalDequeueCount = 1208340, TotalMessageCount = 2804, TotalConsumerCount = 20, TotalProducerCount = 27, TotalConnectionsCount = 265331 , InactiveDurableTopicSubscribers =  0
+
+info: Tue Jun 2 5:14:40 pm | Stage App Server: Count Daemons: 9
+
+info: Tue Jun 2 5:14:40 pm | Stage App Server: Check Disk Usage: 84
+
+info: Tue Jun 2 5:14:40 pm | Stage DC12 LB 1: Check Disk Usage: 22
+
+info: Tue Jun 2 5:14:40 pm | Stage DC12 LB 1: List Running Daemons:
+devcomm+ 10290     1  0 Jun01 ?        00:01:25 java -jar ./cv2-daemon/CV2Daemon.jar
+devcomm+ 11312     1  0 Jun01 ?        00:00:58 java -jar ./EventRelay/EventRelay.jar
+devcomm+ 12277     1  0 Jun01 ?        00:01:31 java -jar ./SurgeTank/SurgeTank.jar
+devcomm+ 13270     1  0 Jun01 ?        00:01:26 java -jar ./vt1512-daemon/VT1512Daemon.jar
+devcomm+ 18007     1  0 Jun02 ?        00:00:43 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+cv1comm  19019     1  0 Apr27 ?        00:35:08 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+ 19398     1  0 May15 ?        00:17:06 java -cp /home/devcomm12/bin Logger
+devcomm+ 23725     1  0 May29 ?        00:03:01 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local jobRelayHost=10.5.124.23
+
+info: Tue Jun 2 5:14:40 pm | Stage New DC12 Server 2: Check Disk Usage: 24
+
+info: Tue Jun 2 5:14:40 pm | Stage DC12 LB 2: List Running Daemons:
+devcomm+   846     1  0 Jun01 ?        00:01:27 java -jar ./SurgeTank/SurgeTank.jar
+devcomm+  1870     1  0 Jun01 ?        00:01:29 java -jar ./vt1512-daemon/VT1512Daemon.jar
+devcomm+ 12873     1  0 May29 ?        00:00:50 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local jobRelayHost=10.5.124.23
+devcomm+ 20080     1  0 Apr14 ?        00:44:49 java -cp /home/devcomm12/bin Logger
+cv1comm  21199     1  0 Apr14 ?        00:44:56 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+ 30323     1  0 Jun01 ?        00:01:30 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+devcomm+ 31309     1  0 Jun01 ?        00:01:28 java -jar ./cv2-daemon/CV2Daemon.jar
+devcomm+ 32333     1  0 Jun01 ?        00:01:01 java -jar ./EventRelay/EventRelay.jar
+
+info: Tue Jun 2 5:21:55 pm | Stage Dev Subsystem: List Running Daemons:
+devcomm+  2878     1  0 Jun01 ?        00:01:11 java -jar JobRelay.jar
+cv1comm   4166     1  0 Jun01 ?        00:01:16 java -DdbSrcHost=bb-db-device.local -DdbSrcTable=device_mgmt.work_queue -DjobSrcType=regular -DamqDstHost=bb-ds-broker.local -DamqDstQueue=cv1 device work -DamqDstFlagsTopic=cv1-device-work-flags -jar ./cv1-workqueue-relay/cv1-workqueue-relay.jar
+cv1comm   5465     1  0 Jun01 ?        00:01:03 java -DjmsHost=bb-ds-broker.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=bb-db-device-hist.local -DholdDelay=60 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+cv1comm   6209     1  0 Apr13 ?        03:29:40 java -Dspring.profiles.active=test -jar /home/cv1comm/cv1-message-processor/cv1-message-processor-1.0.0.jar
+bbproc    8875     1  0 Apr14 ?        00:41:25 java -jar ./ContactSubscriber/ContactSubscriber.jar
+bbproc   15717     1  0 Jun02 ?        00:00:12 java -DuseSingleton=true -jar ./Cloud-Side-Ping-Daemon/Cloud-Side-Ping-Daemon.jar
+bbproc   16236     1  0 Jun02 ?        00:00:12 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+bbproc   21090     1  0 May29 ?        00:05:26 java -DbbdevsDbHostA=bb-db-device.local -DbbdevsDbPortA=3306 -DbbdevsDbHostB=bb-db-device-mgmt.local -DbbdevsDbPortB=3306 -DbbdevsClassMapUsesDb=A -DbbdevsTimeZoneUsesDb=A -DbbdevsCloudSchedUsesDb=B -DdbHostWorkQueue=bb-db-device-mgmt.local -DdbPort=3306 -jar ./CloudSchedMonitor/CloudSchedMonitor.jar
+
+info: Tue Jun 2 5:21:55 pm | Stage Web Server: Count PHP Errors: 0
+
+info: Tue Jun 2 5:21:55 pm | Stage CV1 Gateway 2: Check Disk Usage: 52
+
+info: Tue Jun 2 5:21:55 pm | Stage App Server: Check ActiveMQ Logs:
+[03/Jun/2020:00:21:01 +0000] MemoryPercentUsage = 1, StorePercentUsage = 1, TempPercentUsage = 0, TotalEnqueueCount = 1251948, TotalDequeueCount = 1208340, TotalMessageCount = 2804, TotalConsumerCount = 20, TotalProducerCount = 27, TotalConnectionsCount = 265334 , InactiveDurableTopicSubscribers =  0
+
+info: Tue Jun 2 5:21:55 pm | Stage CV1 Gateway 1: Check Disk Usage: 57
+
+info: Tue Jun 2 5:21:55 pm | Stage CV1 Gateway 1: List Running Daemons:
+cv1comm   2855     1  0 Apr13 ?        00:02:19 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+cv1comm   7866  2855  0 00:13 ?        00:00:02 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+bbproc   13615     1  0 May29 ?        00:02:33 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbproc   25277     1  0 Jun01 ?        00:00:58 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+cv1comm  26558     1  0 Jun01 ?        00:00:37 java -DcacheFileName=cv1-event-master.data-cache.ser -DamqHost=bb-ds-broker.local -DamqPort=61616 -DdataSourceType=jms -DsourceMessageDestination=cv1-event-slave -DslaveEventMessageDestination=cv1-event-slave-sync -DeventMessageDestination=device events -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc   27839     1  0 Jun01 ?        00:00:55 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+
+info: Tue Jun 2 5:21:56 pm | Stage CV1 Gateway 1: Count Running Daemons: 6
+
+info: Tue Jun 2 5:21:56 pm | Stage App Server: Check Disk Usage: 84
+
+info: Tue Jun 2 5:21:56 pm | Stage App Server: Count Daemons: 9
+
+info: Tue Jun 2 5:21:56 pm | Stage App Servers: Check list of running Daemons:
+bbproc    2504     1  0 Jun01 ?        00:01:36 java -jar ./bbDevs-vitalData/bbDevs-vitalData.jar
+bbsvcs    2783     1  0 May29 ?        00:00:12 /usr/bin/php ./UpgradeOrchestratorD
+bbproc    3999     1  0 Jun01 ?        00:01:09 java -DpersistedStore=/var/bb-device-subsys/etc/online-states.sqlite3 -jar ./ConnLossEventGenerator/ConnLossEventGenerator.jar
+bbproc   21388     1  0 Feb04 ?        01:49:04 java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar
+bbproc   23539     1  0  2019 ?        23:24:36 /usr/lib/jvm/java-8-oracle/bin/java -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=/opt/apache-activemq-5.15.0//conf/login.config -Dcom.sun.management.jmxremote -Djava.awt.headless=true -Djava.io.tmpdir=/opt/apache-activemq-5.15.0//tmp -Dactivemq.classpath=/opt/apache-activemq-5.15.0//conf:/opt/apache-activemq-5.15.0//../lib/: -Dactivemq.home=/opt/apache-activemq-5.15.0/ -Dactivemq.base=/opt/apache-activemq-5.15.0/ -Dactivemq.conf=/opt/apache-activemq-5.15.0//conf -Dactivemq.data=/opt/apache-activemq-5.15.0//data -jar /opt/apache-activemq-5.15.0//bin/activemq.jar start xbean:activemq-BlueBOLT-DeviceSubsystem.xml
+bbsvcs   25780     1  0 May27 ?        00:08:39 java -jar /home/bbsvcs/NotiD/NotiD.jar
+devcomm+ 27683     1  0 Apr01 ?        00:00:00 ./bin/dev-comm-assistant /var/bb-device-subsys
+bbproc   29333     1  0 May29 ?        00:04:26 java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar
+bbsvcs   32710     1  0 Jun01 ?        00:00:06 /usr/bin/php ./device-event-handler bb-ds-broker.local 61613 bb-web-svcs-events /var/log/bbsvcs/event-email-actions.log /var/log/bbsvcs/event-power-actions.log
+
+info: Tue Jun 2 5:21:56 pm | Stage DC12 LB 1: Check Disk Usage: 22
+
+info: Tue Jun 2 5:21:56 pm | Stage DC12 LB 2: List Running Daemons:
+devcomm+   846     1  0 Jun01 ?        00:01:27 java -jar ./SurgeTank/SurgeTank.jar
+devcomm+  1870     1  0 Jun01 ?        00:01:30 java -jar ./vt1512-daemon/VT1512Daemon.jar
+devcomm+ 12873     1  0 May29 ?        00:00:50 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local jobRelayHost=10.5.124.23
+devcomm+ 20080     1  0 Apr14 ?        00:44:49 java -cp /home/devcomm12/bin Logger
+cv1comm  21199     1  0 Apr14 ?        00:44:57 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+ 30323     1  0 Jun01 ?        00:01:30 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+devcomm+ 31309     1  0 Jun01 ?        00:01:29 java -jar ./cv2-daemon/CV2Daemon.jar
+devcomm+ 32333     1  0 Jun01 ?        00:01:02 java -jar ./EventRelay/EventRelay.jar
+
+info: Tue Jun 2 5:21:56 pm | Stage DC12 LB 1: List Running Daemons:
+devcomm+ 10290     1  0 Jun01 ?        00:01:26 java -jar ./cv2-daemon/CV2Daemon.jar
+devcomm+ 11312     1  0 Jun01 ?        00:00:58 java -jar ./EventRelay/EventRelay.jar
+devcomm+ 12277     1  0 Jun01 ?        00:01:32 java -jar ./SurgeTank/SurgeTank.jar
+devcomm+ 13270     1  0 Jun01 ?        00:01:27 java -jar ./vt1512-daemon/VT1512Daemon.jar
+devcomm+ 18007     1  0 Jun02 ?        00:00:44 java -DisDrkWriter=true -jar ./vt4315-daemon/VT4315Daemon.jar
+cv1comm  19019     1  0 Apr27 ?        00:35:09 java -jar /home/cv1comm/cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+ 19398     1  0 May15 ?        00:17:07 java -cp /home/devcomm12/bin Logger
+devcomm+ 23725     1  0 May29 ?        00:03:01 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local jobRelayHost=10.5.124.23
+
+info: Tue Jun 2 5:21:56 pm | Stage New DC12 Server 2: Check Disk Usage: 24
+

@@ -1,0 +1,535 @@
+info: Thu Apr 23 3:26:24 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:27:06 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:20 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:07:07 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 23 3:26:24 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:27:06 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:20 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:07:07 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 23 5:06:04 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:27:13 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:20 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:07:09 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 23 5:06:04 pm | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:16:25 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        03:01:17 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:22:20 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:30:07 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:00:02 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Thu Apr 23 5:06:04 pm | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        1-21:41:12 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:14:14 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-01:30:05 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        5-15:25:28 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-00:29:06 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: Thu Apr 23 5:06:04 pm | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        19-13:32:52 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Thu Apr 23 5:06:04 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:27:13 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:20 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:07:09 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 23 5:24:23 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:27:14 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:20 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:07:09 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 23 5:24:23 pm | Prod Web Server 1: Look for Stack Trace Keyword: [23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+[23-Apr-2020 22:57:00 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:57:00 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:57:00 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:57:00 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:57:00 UTC] PHP Notice:  Undefined property: stdClass::$clientName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 73
+[23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+[23-Apr-2020 22:57:00 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:57:00 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:57:00 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:57:00 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:57:00 UTC] PHP Notice:  Undefined property: stdClass::$clientEmail in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 74
+[23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+[23-Apr-2020 22:57:00 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:57:00 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:57:00 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:57:00 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:57:00 UTC] PHP Notice:  Undefined property: stdClass::$deviceClass in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 79
+[23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+[23-Apr-2020 22:57:00 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:57:00 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:57:00 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:57:00 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:57:00 UTC] PHP Notice:  Undefined property: stdClass::$deviceName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 67
+[23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+
+info: Thu Apr 23 5:24:23 pm | Prod Web Server 2: Look for Stack Trace Keyword: [23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+[23-Apr-2020 22:56:59 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:56:59 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:56:59 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:56:59 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:56:59 UTC] PHP Notice:  Undefined property: stdClass::$deviceName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 67
+[23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+[23-Apr-2020 22:56:59 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:56:59 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:56:59 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:56:59 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:56:59 UTC] PHP Notice:  Undefined property: stdClass::$locationId in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 69
+[23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+[23-Apr-2020 22:56:59 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:56:59 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:56:59 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:56:59 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:56:59 UTC] PHP Notice:  Undefined property: stdClass::$locationName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 70
+[23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+[23-Apr-2020 22:56:59 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:56:59 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:56:59 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:56:59 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:56:59 UTC] PHP Notice:  Undefined property: stdClass::$clientId in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 72
+[23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+
+info: Thu Apr 23 5:24:23 pm | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        1-21:41:34 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:14:16 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-01:31:25 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        5-15:26:40 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-00:31:25 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: Thu Apr 23 5:24:23 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:27:14 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:20 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:07:09 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 23 5:24:23 pm | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:16:26 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        03:01:26 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:22:21 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:30:08 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:00:03 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Thu Apr 23 5:24:23 pm | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        19-13:35:46 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Thu Apr 23 5:30:38 pm | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        1-21:41:43 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:14:17 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-01:31:56 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        5-15:27:05 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-00:32:14 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: Thu Apr 23 5:30:38 pm | Prod Web Server 1: Look for Stack Trace Keyword: [23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+[23-Apr-2020 22:57:00 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:57:00 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:57:00 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:57:00 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:57:00 UTC] PHP Notice:  Undefined property: stdClass::$clientName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 73
+[23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+[23-Apr-2020 22:57:00 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:57:00 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:57:00 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:57:00 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:57:00 UTC] PHP Notice:  Undefined property: stdClass::$clientEmail in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 74
+[23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+[23-Apr-2020 22:57:00 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:57:00 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:57:00 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:57:00 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:57:00 UTC] PHP Notice:  Undefined property: stdClass::$deviceClass in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 79
+[23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+[23-Apr-2020 22:57:00 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:57:00 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:57:00 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:57:00 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:57:00 UTC] PHP Notice:  Undefined property: stdClass::$deviceName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 67
+[23-Apr-2020 22:57:00 UTC] PHP Stack trace:
+
+info: Thu Apr 23 5:30:38 pm | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:16:26 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        03:01:29 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:22:22 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:30:09 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:00:03 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Thu Apr 23 5:30:38 pm | Prod Web Server 2: Look for Stack Trace Keyword: [23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+[23-Apr-2020 22:56:59 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:56:59 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:56:59 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:56:59 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:56:59 UTC] PHP Notice:  Undefined property: stdClass::$deviceName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 67
+[23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+[23-Apr-2020 22:56:59 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:56:59 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:56:59 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:56:59 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:56:59 UTC] PHP Notice:  Undefined property: stdClass::$locationId in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 69
+[23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+[23-Apr-2020 22:56:59 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:56:59 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:56:59 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:56:59 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:56:59 UTC] PHP Notice:  Undefined property: stdClass::$locationName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 70
+[23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+[23-Apr-2020 22:56:59 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[23-Apr-2020 22:56:59 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[23-Apr-2020 22:56:59 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[23-Apr-2020 22:56:59 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[23-Apr-2020 22:56:59 UTC] PHP Notice:  Undefined property: stdClass::$clientId in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 72
+[23-Apr-2020 22:56:59 UTC] PHP Stack trace:
+
+info: Thu Apr 23 5:30:38 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:27:14 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:20 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:07:10 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 23 5:30:38 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:27:14 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:20 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:07:10 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 23 5:30:38 pm | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        19-13:36:26 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Mon Apr 27 2:57:05 pm | Prod Web Server 2: Look for Stack Trace Keyword: [27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$deviceClass in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 79
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$deviceName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 67
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$locationId in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 69
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$locationName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 70
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+
+info: Mon Apr 27 2:57:05 pm | Prod Web Server 1: Look for Stack Trace Keyword: [27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$clientEmail in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 74
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$deviceClass in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 79
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$deviceName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 67
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$locationId in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 69
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+
+info: Mon Apr 27 2:57:05 pm | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:20:10 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        03:46:39 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:27:34 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:37:12 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:03:27 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Mon Apr 27 2:57:05 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:33:32 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:25 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:09:24 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Mon Apr 27 2:57:05 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:33:32 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:25 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:09:24 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Mon Apr 27 2:57:05 pm | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        20-06:33:09 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Mon Apr 27 2:57:06 pm | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        1-23:45:59 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:24:26 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-08:03:15 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        5-21:31:25 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-12:16:38 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: error: Command failed: cat stage.log >> old_logs/all_stage.log
+cat: stage.log: No such file or directory
+
+info: Mon Apr 27 2:57:32 pm | Prod Web Server 2: Look for Stack Trace Keyword: [27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$deviceClass in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 79
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$deviceName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 67
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$locationId in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 69
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$locationName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 70
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+
+info: Mon Apr 27 2:57:32 pm | Prod Web Server 1: Look for Stack Trace Keyword: [27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$deviceClass in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 79
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$deviceName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 67
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$locationId in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 69
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+[27-Apr-2020 21:28:54 UTC] PHP   1. {main}() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:0
+[27-Apr-2020 21:28:54 UTC] PHP   2. SearchSvc->process() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/dataSvc.php:25
+[27-Apr-2020 21:28:54 UTC] PHP   3. SearchSvc->search() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:24
+[27-Apr-2020 21:28:54 UTC] PHP   4. OutletSearchSvc->getMatchingOutlets() /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/searchsvc.php:45
+[27-Apr-2020 21:28:54 UTC] PHP Notice:  Undefined property: stdClass::$locationName in /mnt/bb-ui-resources/desk2_new/middleware/searchManagement/outletsearchsvc.php on line 70
+[27-Apr-2020 21:28:54 UTC] PHP Stack trace:
+
+info: Mon Apr 27 2:57:32 pm | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        20-06:33:09 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Mon Apr 27 2:57:32 pm | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:20:10 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        03:46:39 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:27:34 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:37:12 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:03:27 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Mon Apr 27 2:57:32 pm | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        1-23:45:59 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:24:26 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-08:03:17 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        5-21:31:27 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-12:16:42 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: Mon Apr 27 2:57:32 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:33:32 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:25 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:09:24 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Mon Apr 27 2:57:32 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:33:32 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:25 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:09:24 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Tue Apr 28 10:23:18 am | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:21:05 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        03:56:07 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:28:55 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:38:49 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:04:18 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Tue Apr 28 10:23:18 am | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:34:53 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:26 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:09:54 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Tue Apr 28 10:23:18 am | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:34:53 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:26 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:09:54 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Tue Apr 28 10:23:18 am | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        20-10:05:40 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Tue Apr 28 10:23:18 am | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        2-00:11:57 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:26:33 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-09:19:47 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        5-22:45:57 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-14:42:37 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: Wed Apr 29 9:54:48 am | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:22:03 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        04:07:25 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:30:23 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:40:35 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:05:10 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Wed Apr 29 9:54:48 am | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:36:35 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:27 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:10:32 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Wed Apr 29 9:54:48 am | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:36:35 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:27 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:10:32 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Wed Apr 29 9:54:48 am | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        2-00:43:18 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:29:08 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-11:08:40 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        6-00:16:31 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-17:39:22 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: Wed Apr 29 9:54:49 am | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        20-14:20:51 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Wed Apr 29 3:07:57 pm | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:22:19 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        04:10:03 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:30:52 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:41:03 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:05:24 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Wed Apr 29 3:07:57 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:36:55 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:27 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:10:36 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Wed Apr 29 3:07:57 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:36:55 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:27 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:10:36 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Wed Apr 29 3:07:57 pm | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        2-00:49:25 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:29:40 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-11:19:22 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        6-00:30:17 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-18:05:33 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: Wed Apr 29 3:07:57 pm | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        20-15:02:03 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+error: Wed Apr 29 5:01:01 pm | STDERR: Pseudo-terminal will not be allocated because stdin is not a terminal.
+
+info: Wed Apr 29 5:01:01 pm | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:22:24 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        04:11:00 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:31:00 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:41:13 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:05:30 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Wed Apr 29 5:01:01 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:37:02 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:28 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:10:38 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Wed Apr 29 5:01:01 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:37:02 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:28 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:10:38 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+error: Wed Apr 29 5:01:01 pm | STDERR: Permission denied, please try again.
+
+error: Wed Apr 29 5:01:01 pm | STDERR: Permission denied, please try again.
+
+error: Wed Apr 29 5:01:01 pm | STDERR: Permission denied (publickey,password).
+
+info: Wed Apr 29 5:01:01 pm | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 22 Jan27 ?        20-15:02:13 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Wed Apr 29 5:01:02 pm | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        2-00:51:11 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:29:51 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-11:19:31 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        6-00:30:32 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-18:05:50 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+error: Wed Apr 29 5:03:22 pm | STDERR: Pseudo-terminal will not be allocated because stdin is not a terminal.
+
+error: Wed Apr 29 5:03:22 pm | STDERR: Permission denied, please try again.
+
+error: Wed Apr 29 5:03:23 pm | STDERR: Permission denied, please try again.
+
+error: Wed Apr 29 5:03:23 pm | STDERR: Permission denied (publickey,password).
+
+error: Thu Apr 30 8:19:26 am | STDERR: Pseudo-terminal will not be allocated because stdin is not a terminal.
+
+error: Thu Apr 30 8:19:27 am | STDERR: Permission denied, please try again.
+
+error: Thu Apr 30 8:19:27 am | STDERR: Permission denied, please try again.
+
+error: Thu Apr 30 8:19:27 am | STDERR: Permission denied (publickey,password).
+
+info: Thu Apr 30 8:20:06 am | Production DC12 1: Check list of running Daemons:
+bbproc     962     1  0 Apr07 ?        00:22:58 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+bbproc     983     1  0 Apr07 ?        04:18:18 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc    1007     1  0 Apr07 ?        00:31:49 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm   1030     1  0 Apr07 ?        00:42:20 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+devcomm+  4681     1  0 Apr23 ?        00:06:02 java -cp /home/devcomm12/bin Logger
+devcomm+  5031     1  0 Apr23 ?        00:00:00 /home/devcomm12/bin/bb-devComm12 port=8989 datapath=/var/bb-device-subsys dbhost=bb-db-device.local dbhostB=bb-db-device-mgmt.local
+
+info: Thu Apr 30 8:20:06 am | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        05:37:58 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:04:28 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:10:51 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Thu Apr 30 8:20:06 am | Production Periodic Reports: Check list of running Daemons:
+cv1comm   8092     1 21 Jan27 ?        20-15:03:19 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
+info: Thu Apr 30 8:20:08 am | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        2-01:05:53 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        04:31:20 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  4 Jan24 ?        4-11:20:44 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+bbproc     1202      1  6 Jan24 ?        6-00:32:24 /usr/bin/java -jar /home/bbproc/bbDevs-vitalData/bbDevs-vitalData.jar > /var/bb-device-subsys/vital-data-log/stdout 2> /var/bb-device-subsys/vital-data-log/stderr
+cv1comm    1222      1 12 Jan24 ?        11-18:07:53 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+
+info: Tue Jun 2 5:14:40 pm | Production User Layer: Check list of running Daemons:
+bbsvcs   19047     1  0  2019 ?        06:46:04 java -DdeviceMgmtDbHost=bb-db-device.local -jar /home/bbsvcs/NotiD/NotiD.jar
+bbsvcs   19067     1  0  2019 ?        00:05:12 /usr/bin/php ./UpgradeOrchestratorD
+bbsvcs   24233     1  0  2019 ?        01:44:37 /usr/bin/php ./device-event-handler bb-ds-amq1-aws.local 61613 bb-userlayer-device-events-svcs /var/log/bbsvcs/aws-event-email-actions.log /var/log/bbsvcs/aws-event-power-actions.log
+
+info: Tue Jun 2 5:14:40 pm | Production CV1 Gateway 2: Check list of running Daemons:
+bbproc     1134      1  2 Jan24 ?        2-19:41:26 /usr/bin/java -jar /home/bbproc/ConnLossMonitor/ConnLossMonitor.jar > /var/bb-device-subsys/conn-loss-monitor-log/stdout 2> /var/bb-device-subsys/conn-loss-monitor-log/stderr
+bbproc     1147      1  0 Jan24 ?        06:17:24 /usr/bin/java -jar /home/bbproc/ContactPublisher/ContactPublisher.jar > /var/bb-device-subsys/contact-publisher-log/stdout 2> /var/bb-device-subsys/contact-publisher-log/stderr
+cv1comm    1184      1  7 Jan24 ?        10-00:09:49 java -DcacheFileName=cv1-event-slave.data-cache.ser -DamqHost=bb-ds-amq1-aws.local -DdataSourceType=datagram -DeventMessageDestination=cv1-event-slave -DdatagramPort=0xb00e -DslaveSyncMessageDestination=cv1-event-slave-sync -jar /home/cv1comm/cv1-event-filter/cv1-event-filter.jar
+cv1comm    1222      1 12 Jan24 ?        16-03:34:03 java -jar ./cv1-commd-assistant/cv1-commd-assistant.jar /var/bb-device-subsys/etc/cv1-commd-assistant.config.txt
+cv1comm    3268      1  4 Jan24 ?        6-11:11:35 /usr/bin/perl -w -T ./bluebolt_cv1_comm_daemon.pl
+
+info: Tue Jun 2 5:14:40 pm | Production Periodic Reports: Check list of running Daemons:
+cv1comm  23789     1 18 May15 ?        3-09:11:37 java -DjmsHost=bb-ds-broker-aws.local -DjmsSrcQueue=cv1-periodic-reports -DrecorderType=mysql -DdbHost=localhost -DholdDelay=360 -Dcom.sun.management.jmxremote.port=58666 -Dcom.sun.management.jmxremote.rmi.port=58667 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.local.only=false -Djava.rmi.server.hostname=54.202.54.146 -jar ./cv1-periodic-report-recorder/cv1-periodic-report-recorder.jar
+
