@@ -10,7 +10,7 @@
   "author": "Jeff Shomali <info@jeffshomali.com> (http://www.jeffshomali.com)",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-fetch": "^2.6.0",
     "node-osascript": "^2.1.0",
     "ssh2": "^0.8.9",
