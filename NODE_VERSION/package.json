@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "moment": "^2.24.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "node-osascript": "^2.1.0",
     "ssh2": "^0.8.9",
     "winston": "^3.2.1"
